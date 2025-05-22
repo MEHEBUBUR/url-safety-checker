@@ -5,8 +5,8 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Load model and vectorizer once
-model = joblib.load('D:/project/url/model.pkl')
-vectorizer = joblib.load('D:/project/url/vectorizer.pkl')
+model = joblib.load('model.pkl')
+vectorizer = joblib.load('vectorizer.pkl')
 
 HTML = """
 <!doctype html>
@@ -65,4 +65,4 @@ def index():
     return render_template_string(HTML, result=result, result_class=result_class)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)

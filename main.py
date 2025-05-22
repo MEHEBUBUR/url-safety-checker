@@ -47,11 +47,10 @@ def main():
     print(classification_report(y_test, model.predict(X_test)))
 
     # Save model and vectorizer
-    joblib.dump(model, 'D:/project/url/model.pkl')
-    joblib.dump(vectorizer, 'D:/project/url/vectorizer.pkl')
+    joblib.dump(model, 'model.pkl')
+    joblib.dump(vectorizer, 'vectorizer.pkl')
     print("✅ Model trained and saved.")
 
 if __name__ == "__main__":
     main()
 
-    
