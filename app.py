@@ -659,4 +659,8 @@ def index():
     return render_template_string(HTML, result=result, result_class=result_class, reason=reason, request=request)
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> 2114a2518627fe77976b4b95f9e23c868824c37e
