@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ | URL Safety Checker{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container text-center">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to common questions about our URL Safety Checker</p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-4 mb-4">
+                <h2>About URL Safety Checker</h2>
+                
+                <div class="accordion mt-4" id="accordionGeneral">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is URL Safety Checker?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
+                            <div class="accordion-body">
+                                URL Safety Checker is a free online tool that allows you to check if a website URL is safe before visiting it. Our service analyzes URLs for potential security threats such as phishing attempts, malware, and other harmful content.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Who created this tool?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
+                            <div class="accordion-body">
+                                This project was created by Mehebubur Rahman and Rudradev Choudhury, Class 12 students of PM SHRI KENDRIYA VIDYALAYA BARPETA, as part of a school project under the guidance of their teacher.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How much does it cost to use?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
+                            <div class="accordion-body">
+                                URL Safety Checker is completely free to use. There are no hidden fees or premium tiers.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-4 mb-4">
+                <h2>Using the Service</h2>
+                
+                <div class="accordion mt-4" id="accordionUsage">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How do I check a URL?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionUsage">
+                            <div class="accordion-body">
+                                Simply enter the URL you want to check in the input field on our homepage and click the "Scan URL" button. Our system will analyze the URL and provide you with a detailed safety report.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                How accurate are the results?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionUsage">
+                            <div class="accordion-body">
+                                Our URL checker uses multiple detection methods to provide accurate results. However, it's important to note that no security tool is 100% perfect. We recommend using our service as one layer in your overall online safety approach.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Can I check multiple URLs at once?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionUsage">
+                            <div class="accordion-body">
+                                Currently, our service only supports checking one URL at a time. This allows us to provide more detailed analysis for each individual URL.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-4">
+                <h2>Privacy & Security</h2>
+                
+                <div class="accordion mt-4" id="accordionPrivacy">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Do you store the URLs I check?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionPrivacy">
+                            <div class="accordion-body">
+                                We do not permanently store the URLs you submit for checking. URLs are processed in memory and are automatically deleted after analysis is complete. For more information, please see our <a href="/privacy-policy">Privacy Policy</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Is my personal information safe?
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionPrivacy">
+                            <div class="accordion-body">
+                                Yes, we take privacy very seriously. We don't collect or store any personal information beyond what's necessary to provide our service. We don't share your data with third parties for marketing or other purposes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                How can I contact you with questions?
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionPrivacy">
+                            <div class="accordion-body">
+                                If you have any questions about our service or your privacy, you can contact us at <a href="mailto:contact.mehebubur@gmail.com">contact.mehebubur@gmail.com</a> or call us at +91 XXXXX XXXXX.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p>Don't see your question here? <a href="mailto:contact.mehebubur@gmail.com">Contact us</a> and we'll get back to you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

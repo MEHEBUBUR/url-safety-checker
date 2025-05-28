@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+
+{% block title %}How URL Safety Checker Works{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container text-center">
+        <h1>How URL Safety Checker Works</h1>
+        <p>Understand the technology behind our URL safety analysis</p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="card card-premium p-4 mb-5">
+                <h2 class="section-title">Our Analysis Process</h2>
+                
+                <div class="row mb-5">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="url-analysis-flowchart">
+                            <div class="flowchart-container">
+                                <div class="flowchart-node start">
+                                    <div class="node-icon"><i class="fas fa-link"></i></div>
+                                    <div class="node-text">URL Input</div>
+                                    <div class="node-arrow"><i class="fas fa-arrow-down"></i></div>
+                                </div>
+                                
+                                <div class="flowchart-node">
+                                    <div class="node-icon"><i class="fas fa-check-circle"></i></div>
+                                    <div class="node-text">Format Validation</div>
+                                    <div class="node-arrow"><i class="fas fa-arrow-down"></i></div>
+                                </div>
+                                
+                                <div class="flowchart-node">
+                                    <div class="node-icon"><i class="fas fa-search"></i></div>
+                                    <div class="node-text">Security Analysis</div>
+                                    <div class="node-arrow"><i class="fas fa-arrow-down"></i></div>
+                                </div>
+                                
+                                <div class="flowchart-node">
+                                    <div class="node-icon"><i class="fas fa-database"></i></div>
+                                    <div class="node-text">Threat Database Check</div>
+                                    <div class="node-arrow"><i class="fas fa-arrow-down"></i></div>
+                                </div>
+                                
+                                <div class="flowchart-node">
+                                    <div class="node-icon"><i class="fas fa-chart-bar"></i></div>
+                                    <div class="node-text">Risk Assessment</div>
+                                    <div class="node-arrow"><i class="fas fa-arrow-down"></i></div>
+                                </div>
+                                
+                                <div class="flowchart-node end">
+                                    <div class="node-icon"><i class="fas fa-shield-alt"></i></div>
+                                    <div class="node-text">Security Report</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mb-3">Real-Time Security Assessment</h3>
+                        <p>Our URL Safety Checker performs multiple security checks in real-time when you submit a URL. The system analyzes various factors including domain reputation, content patterns, SSL certificates, and more to determine if a website is potentially dangerous.</p>
+                        <p>Using a combination of threat intelligence databases and pattern recognition algorithms, we can identify suspicious URLs before you visit them.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center">Security Analysis Steps</h3>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-number">1</div>
+                                <div class="timeline-content">
+                                    <h4>URL Validation</h4>
+                                    <p>First, we check if the URL is properly formatted and follows standard URL protocols.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-number">2</div>
+                                <div class="timeline-content">
+                                    <h4>Domain Analysis</h4>
+                                    <p>We examine the domain's age, reputation, and registration details. Newly created domains with suspicious patterns are often used for phishing attacks.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-number">3</div>
+                                <div class="timeline-content">
+                                    <h4>Blacklist Check</h4>
+                                    <p>The URL is checked against multiple databases of known malicious websites, phishing domains, and spam sources.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-number">4</div>
+                                <div class="timeline-content">
+                                    <h4>SSL Certificate Verification</h4>
+                                    <p>We verify if the site uses a secure connection (HTTPS) and has a valid SSL certificate, which is essential for secure data transmission.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-number">5</div>
+                                <div class="timeline-content">
+                                    <h4>Redirect Analysis</h4>
+                                    <p>Many malicious sites use multiple redirects to hide their true nature. We trace all redirects to identify potential cloaking techniques.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-number">6</div>
+                                <div class="timeline-content">
+                                    <h4>Risk Score Calculation</h4>
+                                    <p>Based on all collected data, we calculate a comprehensive risk score that indicates the likelihood of the URL being dangerous.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-md-6 mb-4">
+                    <div class="card card-premium h-100 p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h4>Real-Time Analysis</h4>
+                        <p class="text-muted">Our system processes URLs in real-time, providing instant feedback about potential security threats.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card card-premium h-100 p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Comprehensive Protection</h4>
+                        <p class="text-muted">We check for multiple threat types including phishing, malware, scams, and suspicious content.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card card-premium p-4 mb-5">
+                <h3 class="mb-4">Understanding URL Threats</h3>
+                
+                <div class="accordion" id="threatAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                Phishing Attacks
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#threatAccordion">
+                            <div class="accordion-body">
+                                <p>Phishing websites mimic legitimate sites to trick users into revealing sensitive information such as passwords, credit card details, or personal data. These sites often look identical to trusted websites but have subtle differences in their URLs.</p>
+                                <p>Our system detects phishing attempts by analyzing URL patterns, domain information, and site content similarities to known legitimate websites.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                Malware Distribution
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#threatAccordion">
+                            <div class="accordion-body">
+                                <p>Malicious websites can attempt to install viruses, trojans, ransomware, or other harmful software on your device. This can happen through drive-by downloads, misleading download buttons, or exploiting browser vulnerabilities.</p>
+                                <p>Our analysis identifies websites known to distribute malware or that exhibit suspicious behavior patterns associated with malware distribution.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                Scam and Fraud Sites
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#threatAccordion">
+                            <div class="accordion-body">
+                                <p>Scam websites aim to defraud users through fake offers, false promotions, counterfeit products, or non-existent services. These sites often create a sense of urgency to pressure users into making quick decisions.</p>
+                                <p>Our system identifies potential scam sites by checking against databases of known fraudulent domains and analyzing content for deceptive practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alert alert-primary p-4 d-flex align-items-start">
+                <i class="fas fa-info-circle fa-2x me-3 mt-1"></i>
+                <div>
+                    <h4>Educational Purpose</h4>
+                    <p class="mb-0">URL Safety Checker was developed as a school project. While it uses actual techniques for URL analysis, it's primarily an educational tool to demonstrate web security concepts. For mission-critical security, we recommend using professional cybersecurity solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .timeline {
+        position: relative;
+        padding-left: 60px;
+        margin-bottom: 50px;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        border-radius: 5px;
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    .timeline-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .timeline-number {
+        position: absolute;
+        left: -60px;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .timeline-content {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border-left: 4px solid var(--primary-color);
+    }
+    
+    .timeline-content h4 {
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+    
+    .timeline-content p {
+        margin-bottom: 0;
+        color: var(--text-color);
+    }
+    
+    .accordion-button:not(.collapsed) {
+        background-color: rgba(58, 12, 163, 0.05);
+        color: var(--primary-color);
+    }
+    
+    .accordion-button:focus {
+        box-shadow: 0 0 0 0.25rem rgba(58, 12, 163, 0.25);
+    }
+    
+    .accordion-item {
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* URL Analysis Flowchart Styles */
+    .url-analysis-flowchart {
+        background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(52, 152, 219, 0.1));
+        border-radius: 12px;
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .flowchart-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .flowchart-node {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        border-left: 4px solid var(--primary-color);
+    }
+    
+    .flowchart-node.start {
+        border-top: 4px solid var(--primary-color);
+        border-left: 0;
+    }
+    
+    .flowchart-node.end {
+        border-bottom: 4px solid var(--primary-color);
+        border-left: 0;
+        margin-bottom: 0;
+    }
+    
+    .node-icon {
+        margin-bottom: 8px;
+    }
+    
+    .node-icon i {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+    }
+    
+    .node-text {
+        font-weight: 600;
+        color: var(--text-color);
+    }
+    
+    .node-arrow {
+        position: absolute;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--secondary-color);
+        z-index: 1;
+    }
+    
+    @media (max-width: 768px) {
+        .flowchart-container {
+            max-width: 250px;
+        }
+        
+        .flowchart-node {
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+        
+        .node-icon i {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+{% endblock %} 

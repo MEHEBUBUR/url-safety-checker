@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}Safety Tips | URL Safety Checker{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container text-center">
+        <h1>Online Safety Tips</h1>
+        <p>Practical advice to stay safe while browsing the internet</p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-4 mb-4">
+                <h2>Essential URL Safety Tips</h2>
+                <p class="lead">URLs are your gateway to websites - learn how to identify safe ones from dangerous ones.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Check for HTTPS</h5>
+                                <p>Always look for "https://" at the beginning of website URLs, especially before entering any personal information. The 's' stands for secure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Verify Domain Names</h5>
+                                <p>Pay close attention to the domain name. Phishing sites often use domains that look similar to legitimate ones with slight misspellings.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Beware of URL Shorteners</h5>
+                                <p>Short URLs (like bit.ly links) can hide the true destination. Use our URL checker to verify where they lead before clicking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-check-circle text-success fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Look for Security Indicators</h5>
+                                <p>Most browsers show a padlock icon for secure sites. Click on it to verify the site's security certificate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-4 mb-4">
+                <h2>Email Security Tips</h2>
+                <p class="lead">Email is a common vector for phishing attacks and malicious URLs.</p>
+                
+                <div class="alert alert-warning mb-4" role="alert">
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <i class="fas fa-exclamation-triangle fa-2x"></i>
+                        </div>
+                        <div>
+                            <h5 class="alert-heading">Be Wary of Unexpected Emails</h5>
+                            <p class="mb-0">If you receive an unexpected email with links or attachments, even if it appears to be from someone you know, verify with the sender through another channel before clicking.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        Never click on links in emails claiming there's a problem with your account
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        Hover over links to preview the URL before clicking
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        Be suspicious of emails with urgent calls to action
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        Check the sender's email address carefully, not just the display name
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>
+                        Use our URL checker to verify any suspicious links in emails
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card p-4">
+                <h2>General Online Safety Practices</h2>
+                <p class="lead">Additional tips to maintain your online security.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-0 bg-light p-3">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-lock text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="text-center mb-3">Use Strong, Unique Passwords</h5>
+                            <p class="mb-0">Create complex passwords and never reuse them across multiple sites. Consider using a password manager.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-0 bg-light p-3">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-shield-virus text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="text-center mb-3">Keep Software Updated</h5>
+                            <p class="mb-0">Regularly update your operating system, browser, and security software to patch vulnerabilities.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-0 bg-light p-3">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-user-shield text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="text-center mb-3">Enable Two-Factor Authentication</h5>
+                            <p class="mb-0">Add an extra layer of security to your accounts by requiring a second verification method.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 border-0 bg-light p-3">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-wifi text-primary fa-3x"></i>
+                            </div>
+                            <h5 class="text-center mb-3">Use Caution on Public Wi-Fi</h5>
+                            <p class="mb-0">Avoid accessing sensitive accounts or entering personal information when using public networks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}About URL Safety Checker{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container text-center">
+        <h1>About URL Safety Checker</h1>
+        <p>Learn more about our mission to make the web safer for everyone</p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card card-premium p-4 mb-5">
+                <h2 class="mb-4">Our Mission</h2>
+                <p class="lead">At URL Safety Checker, our mission is to empower users with a simple, reliable tool to help navigate the internet safely. In an age where phishing scams, malware, and fraudulent websites are increasingly common, we aim to provide a secure solution that protects users before they even click a link.</p>
+                
+                <p>Founded with a commitment to online safety and digital awareness, our platform analyzes URLs in real-time to detect potential threats such as phishing attempts, scam websites, and malware distribution. By leveraging intelligent algorithms and up-to-date threat databases, we provide instant, accurate assessments that help users make informed decisions.</p>
+                
+                <p>Whether you're browsing, sharing, or receiving links, URL Safety Checker is your first line of defense against online threats. We believe that cybersecurity should be accessible to everyone—and with our tool, staying safe online is just one click away.</p>
+            </div>
+            
+            <div class="card card-premium p-4 mb-5">
+                <h2 class="mb-4">Our Team</h2>
+                <p>URL Safety Checker was developed by two passionate students from PM SHRI KENDRIYA VIDYALAYA BARPETA:</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-6 mb-4">
+                        <div class="text-center">
+                            <div class="avatar-circle mb-3">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                            <h4>Mehebubur Rahman</h4>
+                            <p class="text-muted">Creator & Designer</p>
+                            <p>Class 12 Student, PM SHRI KENDRIYA VIDYALAYA BARPETA</p>
+                            <div class="social-links">
+                                <a href="#" class="text-muted me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/MEHEBUBUR" target="_blank" class="text-muted me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-muted"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="text-center">
+                            <div class="avatar-circle mb-3">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                            <h4>Rudradev Choudhury</h4>
+                            <p class="text-muted">Creator & Developer</p>
+                            <p>Class 12 Student, PM SHRI KENDRIYA VIDYALAYA BARPETA</p>
+                            <div class="social-links">
+                                <a href="#" class="text-muted me-2"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="text-muted me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="text-muted"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="special-credits mt-5">
+                    <h4 class="text-center mb-4">Special Acknowledgments</h4>
+                    
+                    <div class="card mb-4 p-4">
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <div class="avatar-circle-sm">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">MR. ANAND PRASAD</h5>
+                                <p class="text-muted mb-1">PGT COMPUTER SCIENCE</p>
+                                <p class="mb-0">We express our sincere gratitude to Mr. Anand Prasad for his invaluable guidance, mentorship, and technical expertise throughout the development of this project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card p-4">
+                        <div class="d-flex align-items-center">
+                            <div class="me-3">
+                                <div class="avatar-circle-sm">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Our Parents</h5>
+                                <p class="mb-0">We would like to express our heartfelt thanks to our parents for their unwavering support, encouragement, and for providing all the necessary resources that made this project possible. Their belief in our abilities and constant motivation has been the foundation of our success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card card-premium p-4">
+                <h2 class="mb-4">Our Technology</h2>
+                <p>URL Safety Checker utilizes advanced algorithms and security databases to analyze URLs for potential threats:</p>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>Pattern Analysis:</strong> Identifies suspicious patterns in URLs that may indicate phishing attempts</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>Domain Checking:</strong> Verifies domain age and reputation</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>Blacklist Verification:</strong> Checks against databases of known malicious websites</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>SSL Certificate Validation:</strong> Verifies secure connection capabilities</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>Redirect Analysis:</strong> Traces URL redirects to identify cloaking techniques</li>
+                </ul>
+                <p class="mt-4">While our tool provides valuable insights, we recommend using it as part of a comprehensive approach to online security, which includes keeping your software updated and using strong, unique passwords.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .avatar-circle {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin: 0 auto;
+    }
+    
+    .avatar-circle-sm {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .social-links a {
+        transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        color: var(--primary-color) !important;
+    }
+    
+    .special-credits .card {
+        border-left: 4px solid var(--primary-color);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+    }
+    
+    .special-credits .card:hover {
+        transform: translateY(-5px);
+    }
+</style>
+{% endblock %} 

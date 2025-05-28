@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+
+{% block title %}URL Safety Checker - Check URLs Before You Visit{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container text-center">
+        <h1>Check if a URL is Safe Before You Visit</h1>
+        <p>Protect yourself from phishing, malware, and malicious websites.</p>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card p-4 shadow-lg">
+                <div id="form-container" class="py-2">
+                    <h3 class="mb-4 text-center">Analyze a URL for Security Threats</h3>
+                    <form id="url-form" action="/check" method="post">
+                        <div class="mb-4 position-relative">
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 ps-3">
+                                    <i class="fas fa-link text-secondary"></i>
+                                </span>
+                                <input type="text" class="form-control url-input border-start-0 ps-0" name="url" placeholder="Enter URL to check (e.g., https://example.com)" required>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary scan-btn">
+                                <i class="fas fa-shield-alt me-2"></i>Analyze URL
+                            </button>
+                        </div>
+                    </form>
+                    {% if error %}
+                    <div class="alert alert-danger mt-3" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i> {{ error }}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <div id="scanning-container" class="text-center py-5">
+                    <h3 class="mb-4">Analyzing URL Security...</h3>
+                    
+                    <div class="code-animation mb-4">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-dot red"></div>
+                                <div class="terminal-dot yellow"></div>
+                                <div class="terminal-dot green"></div>
+                                <div class="terminal-title">URL Security Scan</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="terminal-line">$ initiating security scan</div>
+                                <div class="terminal-line">$ checking domain reputation...</div>
+                                <div class="terminal-line typing">$ analyzing SSL certificate...</div>
+                                <div class="terminal-line waiting">$ verifying against blacklists...</div>
+                                <div class="terminal-line waiting">$ checking for phishing patterns...</div>
+                                <div class="terminal-line waiting">$ validating URL structure...</div>
+                                <div class="terminal-line waiting">$ finalizing security report...</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-muted">Please wait while we analyze this URL. This may take a few moments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5">
+    <h2 class="section-title">Why Use URL Safety Checker?</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 p-4 text-center">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <h4 class="mt-1 mb-3">Protection Against Phishing</h4>
+                <p class="text-muted">Identify and avoid phishing websites designed to steal your personal information.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 p-4 text-center">
+                <div class="feature-icon">
+                    <i class="fas fa-virus-slash"></i>
+                </div>
+                <h4 class="mt-1 mb-3">Malware Detection</h4>
+                <p class="text-muted">Stay safe from websites that distribute malware, ransomware, or other harmful software.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 p-4 text-center">
+                <div class="feature-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h4 class="mt-1 mb-3">Real-Time Analysis</h4>
+                <p class="text-muted">Get instant safety assessments before visiting any suspicious links online.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mb-5 py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+            <h2 class="mb-4">How It Works</h2>
+            <p class="lead mb-4 text-secondary">Our advanced scanning technology checks URLs against multiple security databases and uses machine learning to detect potential threats.</p>
+            <ul class="list-unstyled">
+                <li class="mb-3 d-flex align-items-center">
+                    <div class="me-3 text-success"><i class="fas fa-check-circle fa-lg"></i></div>
+                    <div>Phishing site detection</div>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                    <div class="me-3 text-success"><i class="fas fa-check-circle fa-lg"></i></div>
+                    <div>Malware and ransomware scanning</div>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                    <div class="me-3 text-success"><i class="fas fa-check-circle fa-lg"></i></div>
+                    <div>Domain reputation checking</div>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                    <div class="me-3 text-success"><i class="fas fa-check-circle fa-lg"></i></div>
+                    <div>SSL certificate validation</div>
+                </li>
+            </ul>
+            <a href="/how-it-works" class="btn btn-primary mt-3">
+                <span>Learn More</span>
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+        <div class="col-lg-7">
+            <div class="card shadow-lg border-0 p-4">
+                <h5 class="mb-3 text-center">How URL Safety Checker Works</h5>
+                <div class="diagram-container">
+                    <div class="process-diagram">
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="step-content">
+                                <h6>URL Input</h6>
+                                <p class="small text-muted">User submits a URL for analysis</p>
+                            </div>
+                            <div class="step-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="step-content">
+                                <h6>Analysis</h6>
+                                <p class="small text-muted">Multiple security checks run against the URL</p>
+                            </div>
+                            <div class="step-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="step-content">
+                                <h6>DB Verification</h6>
+                                <p class="small text-muted">URL checked against threat databases</p>
+                            </div>
+                            <div class="step-arrow">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step">
+                            <div class="step-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="step-content">
+                                <h6>Results</h6>
+                                <p class="small text-muted">Security assessment provided to user</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .diagram-container {
+        padding: 20px 0;
+    }
+    
+    .process-diagram {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .process-step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        flex: 1;
+        min-width: 100px;
+    }
+    
+    .step-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 1.4rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .step-content {
+        width: 100%;
+    }
+    
+    .step-content h6 {
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    
+    .step-content p {
+        margin-bottom: 0;
+        line-height: 1.3;
+    }
+    
+    .step-arrow {
+        display: flex;
+        align-items: center;
+        color: var(--secondary-color);
+        position: absolute;
+        right: -15px;
+        top: 20px;
+        font-size: 1.2rem;
+        z-index: 1;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .process-diagram {
+            flex-direction: column;
+        }
+        
+        .process-step {
+            flex-direction: row;
+            text-align: left;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        
+        .step-icon {
+            margin-right: 15px;
+            margin-bottom: 0;
+        }
+        
+        .step-arrow {
+            transform: rotate(90deg);
+            right: auto;
+            left: 20px;
+            top: auto;
+            bottom: -25px;
+        }
+    }
+</style>
+{% endblock %} 
